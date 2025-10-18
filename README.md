@@ -1,4 +1,5 @@
 [![Review Assignment Due Date](https://classroom.github.com/assets/deadline-readme-button-22041afd0340ce965d47ae6ef1cefeee28c7c493a6346c4f15d667ab976d596c.svg)](https://classroom.github.com/a/F3f9PyrQ)
+
 # UnaHur - Red Anti-Social
 
 Se solicita el modelado y desarrollo de un sistema backend para una red social llamada **“UnaHur Anti-Social Net”**, inspirada en plataformas populares que permiten a los usuarios realizar publicaciones y recibir comentarios sobre las mismas.
@@ -70,3 +71,40 @@ Los sponsors definieron los siguientes nombres y descripciones para las entidade
 - Hace el upload de las imganes que se asocian a un POST que lo guarden en una carpeta de imagenes dentro del servidor web.
 - ¿Cómo modelarías que un usuario pueda "seguir" a otros usuarios, y a su vez ser seguido por muchos? Followers
 - Con la información de los post no varia muy seguido que estrategias podrian utilizar la que la información no sea constantemente consultada desde la base de datos.
+
+# 🧠 UnaHur Anti-Social Net (Backend) Proyecto backend desarrollado como **MVP** para la materia de _Entorno de Desarrollo de Proyectos (EDP)_. Permite gestionar usuarios, publicaciones, imágenes, comentarios y etiquetas con Sequelize y Express.
+
+---
+
+# # 🚀 Tecnologías utilizadas :
+
+- **Node.js** + **Express**
+- **Sequelize ORM**
+- **SQLite** (base de datos local)
+- **Swagger UI** (documentación)
+- **Postman** (colección de pruebas)
+
+---
+
+## ⚙️ Instalación y ejecución:
+
+Clonar el repositorio o copiar los archivos
+git clone https://github.com/EP-UnaHur-2025C2/anti-social-relational-grupo-4c2
+
+Instalar dependencias:
+
+bash npm install
+
+Crear un archivo .env en la raíz del proyecto con el siguiente contenido:
+
+PORT=3000
+DB_DIALECT=sqlite
+DB_STORAGE=./database.sqlite
+
+Ejecutar las migraciones para generar automáticamente la base de datos database.sqlite con todas las tablas necesarias:
+
+npx sequelize-cli db:migrate
+
+Iniciar el servidor:
+
+npm run dev

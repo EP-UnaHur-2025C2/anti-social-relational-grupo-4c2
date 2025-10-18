@@ -1,0 +1,107 @@
+openapi: 3.0.0
+info:
+  title: UnaHur Anti-Social Net API
+  description: API para la red social UnaHur Anti-Social Net (MVP)
+  version: 1.0.0
+
+servers:
+  - url: http://localhost:3000
+
+paths:
+  /api/users:
+    get:
+      summary: Obtener todos los usuarios
+      responses:
+        "200":
+          description: Lista de usuarios
+    post:
+      summary: Crear un nuevo usuario
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                nickName:
+                  type: string
+                email:
+                  type: string
+      responses:
+        "201":
+          description: Usuario creado correctamente
+
+  /api/posts:
+    get:
+      summary: Obtener todas las publicaciones
+      responses:
+        "200":
+          description: Lista de posts
+    post:
+      summary: Crear un nuevo post
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                description:
+                  type: string
+                userId:
+                  type: integer
+      responses:
+        "201":
+          description: Post creado correctamente
+
+  /api/comments/post/{postId}:
+    get:
+      summary: Obtener los comentarios visibles de un post
+      parameters:
+        - name: postId
+          in: path
+          required: true
+          schema:
+            type: integer
+      responses:
+        "200":
+          description: Lista de comentarios filtrados
+
+  /api/images:
+    post:
+      summary: Agregar una imagen a un post
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                url:
+                  type: string
+                postId:
+                  type: integer
+      responses:
+        "201":
+          description: Imagen creada
+
+  /api/tags:
+    get:
+      summary: Obtener todas las etiquetas
+      responses:
+        "200":
+          description: Lista de etiquetas
+    post:
+      summary: Crear una etiqueta
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                name:
+                  type: string
+      responses:
+        "201":
+          description: Etiqueta creada
