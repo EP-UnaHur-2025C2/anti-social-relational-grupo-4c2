@@ -1,0 +1,46 @@
+{
+  "users": [
+    { "nickName": "gonzalo", "email": "gonzalo@mail.com" },
+    { "nickName": "sofia", "email": "sofia@mail.com" },
+    { "nickName": "tomas", "email": "tomas@mail.com" },
+    { "nickName": "mariano", "email": "mariano@mail.com" }
+  ],
+
+  "posts": [
+    { "description": "Mi primer post", "userId": 1 },
+    { "description": "Post actualizado", "userId": 1 },
+    { "description": "Mi segundo post", "userId": 1 },
+    { "description": "Probando relaciones entre posts y tags", "userId": 2 },
+    { "description": "Última publicación de testeo", "userId": 3 }
+  ],
+
+  "comments": [
+    { "text": "Excelente publicación!", "postId": 1, "userId": 1 },
+    { "text": "Buen contenido, muy claro!", "postId": 1, "userId": 2 },
+    { "text": "Muy útil, gracias por compartir!", "postId": 2, "userId": 3 },
+    { "text": "Gran explicación!", "postId": 3, "userId": 4 }
+  ],
+
+  "post_images": [
+    { "url": "https://picsum.photos/id/101/200", "postId": 1 },
+    { "url": "https://picsum.photos/id/102/200", "postId": 1 },
+    { "url": "https://picsum.photos/id/103/200", "postId": 2 },
+    { "url": "https://picsum.photos/id/104/200", "postId": 3 }
+  ],
+
+  "tags": [
+    { "name": "javascript" },
+    { "name": "nodejs" },
+    { "name": "express" },
+    { "name": "sequelize" },
+    { "name": "backend" }
+  ],
+
+  "post_tags": [
+    { "postId": 1, "tagId": 1 },
+    { "postId": 2, "tagId": 2 },
+    { "postId": 3, "tagId": 3 },
+    { "postId": 4, "tagId": 4 },
+    { "postId": 5, "tagId": 5 }
+  ]
+}
