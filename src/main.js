@@ -7,6 +7,8 @@ const swaggerDocument = YAML.load('./swagger.yaml')
 
 const app = express()
 app.use(express.json())
+const cors = require("cors");
+app.use(cors({ origin: "http://localhost:5173" }));
 
 // Importar rutas
 const userRoutes = require('./routes/userRoutes')

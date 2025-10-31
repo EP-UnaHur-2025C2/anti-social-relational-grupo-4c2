@@ -15,7 +15,7 @@ module.exports = (sequelize, DataTypes) => {
 
       // Un post tiene muchas tags (etiquetas)
       Post.belongsToMany(models.Tag, {
-        through: 'Post_Tags',
+        through: 'Post_Tags', // nombre de la tabla intermedia
         as: 'tags',
         foreignKey: 'postId',
         otherKey: 'tagId'
