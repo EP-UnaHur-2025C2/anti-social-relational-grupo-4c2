@@ -88,23 +88,24 @@ Los sponsors definieron los siguientes nombres y descripciones para las entidade
 
 ## ⚙️ Instalación y ejecución:
 
-Clonar el repositorio o copiar los archivos
+```bash
+Clonar repo:
 git clone https://github.com/EP-UnaHur-2025C2/anti-social-relational-grupo-4c2
 
-Instalar dependencias:
-
-bash npm install
+Instalar dependencias
+npm install
 
 Crear un archivo .env en la raíz del proyecto con el siguiente contenido:
-
 PORT=3000
 DB_DIALECT=sqlite
 DB_STORAGE=./database.sqlite
 
-Ejecutar las migraciones para generar automáticamente la base de datos database.sqlite con todas las tablas necesarias:
-
+Ejecutar las migraciones para generar automáticamente la base de datos database.sqlite:
 npx sequelize-cli db:migrate
 
-Iniciar el servidor:
+Cargar datos de prueba:
+npx sequelize-cli db:seed:all
 
+Iniciar el servidor:
 npm run dev
+```
